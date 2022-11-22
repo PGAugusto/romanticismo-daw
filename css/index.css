@@ -23,6 +23,15 @@ body {font-family: 'Montserrat', sans-serif;
           width:80%;
           margin:auto;}
 
+section {padding:50px 0;} /* en todas las secciones debe correr el aire */
+
+.titulo-section {font-family: titulos;
+            font-size:3rem;
+            color:darkred;
+            text-align:center;
+            border-bottom: 3px solid black;
+            width:50%;
+            margin:auto;}
 
 /********************* HERO SECTION : opción 1 imagen + texto **********************/
 
@@ -91,7 +100,18 @@ body {font-family: 'Montserrat', sans-serif;
         width: 100%;
         padding: 20px;
         }  /****** habría que cambiar en la media query el top de posicionamiento */
-  
+
+        
+/********************** AUTORES SECTION **********************************/
+
+#autores {background-color: #f1f1f1;
+          }
+
+
+
+
+
+
 /*********************** MEDIA QUERIES ***********************************/
 
 @media only screen and (width<=900px){
