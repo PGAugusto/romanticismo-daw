@@ -1,0 +1,84 @@
+/*********************************************************************/
+/*  Web del Romanticismo                                             */
+/*  CSS de Autores románticos                                        */
+/*  Autora: Pilar González Augusto                                   */
+/*  versión 1.0                                                      */
+/*********************************************************************/
+
+/****************** ESTILO GENERAL ***********************************/
+
+@font-face {
+     font-family: titulos;
+     src: url('./../fonts/LobsterTwo-Bold.ttf');
+}
+
+/***** OJO!!!!!: PARA QUE CUENTE EN EL WIDTH DE CADA CAJA, EL BORDE Y EL PADDING ***/
+* {box-sizing: border-box;}
+
+body {/*background-color: rgb(214, 230, 235);*/
+     background-image: url('../images/adobe-stock.jpg');
+     /*background-repeat:no-repeat;
+     background-size: 128px;
+     background-position:right;
+     font-family: 'Montserrat', sans-serif;*/
+     /*background: linear-gradient(to bottom right, #ffffff 0%, #999999 100%);*/
+    /* padding: 4%;*/} /* al tener un wrapper, ya no necesito este padding */
+
+#wrapper { 
+           background-color:white;
+           width:80%;
+           margin:auto;
+           padding:20px;
+           /* height:100vh;  obligar a que el alto del wrapper sea el de la ventana */
+}
+
+h1, h2, h3 {font-family:titulos;
+            color:rgb(27, 27, 82);
+          }
+
+h1 {font-size:3em;
+    text-align: center;
+    border: 1px dotted black;
+    padding:15px;}
+
+p {text-align:justify;
+   text-indent:2.5em;}
+
+#espronceda {width:20%;
+             float:right;
+             padding:15px;
+             opacity:0.75;}
+
+#espronceda:hover {opacity:1;}
+
+.limpiafloat {clear:both;} /* elimina los desagradables efectos secundarios de float */
+
+a {text-decoration:none;
+   color:rgb(27, 27, 82);}
+
+a:hover {color:#55ACEE;}
+
+/********************** PARA DAR ESTILO A FONT AWESOME *************/
+
+.fa-facebook {color:#3B5998;    
+              }
+
+.fa-twitter {color:#55ACEE;}
+
+.fa {font-size:200% !important; /* utilizarlo como último recurso */
+    }
+/**********************  MEDIA QUERIES *****************************/
+/***** tamaño tablet ****/
+@media only screen and (width<=800px){ /* todas las excepciones para tablet */
+     #wrapper {width:90%;} /* se provecha más el ancho */
+     #espronceda {width:40%;} /* se corrige el zoom de la foto */
+      
+}
+
+/***** tamaño móvil ******/
+@media only screen and (width<=500px){ /* todas las excepciones para móvil */
+     #wrapper {width:100%;}  /* se aprovecha todo el ancho */
+     #espronceda {width:100%;  /* se corrige el tamaño */
+                  padding:15px 0px;} /*se deja padding solo donde es necesario */
+      
+}

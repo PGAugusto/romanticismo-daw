@@ -1,0 +1,46 @@
+/*********************************************************************/
+/*  Web del Romanticismo                                             */
+/*  CSS de la Canción del Pirata de Espronceda                                        */
+/*  Autora: Pilar González Augusto                                   */
+/*  versión 1.0                                                      */
+/*********************************************************************/
+
+/****************** ESTILO GENERAL ***********************************/
+
+@font-face {
+    font-family: escritura;
+    src: url('../fonts/Merienda-Regular.ttf');
+}
+
+body {font-family: escritura;
+      background-image: url('../images/calavera.jpg');
+      background-color:#484C55;
+      /* donde la imagen no llega, aparece el gris */
+      background-repeat:no-repeat;
+      background-size:cover ;}
+
+#poema {
+        background-color: #f5eacf80;
+        /* opacity:0.5; transparenta todo y pierde contraste */
+        width:30%;
+        text-align:center;
+        margin-left:50%; /* la medida de % es SIEMPRE RELATIVA AL ANCHO */
+        margin-top:20vh;
+        padding:20px 0;
+        border-radius:0 40px 0 40px;
+}      
+
+h1 {color:#BB0C10}
+
+/********* MEDIA QUERIES ***********************/
+
+@media only screen and (width<=900px) {
+    #poema {width:50%;
+            margin-left:30%;}
+}
+
+@media only screen and (width<=600px){
+    #poema {width:70%;
+            margin-left:15%;
+            background-color:#f5eacf99;}
+}

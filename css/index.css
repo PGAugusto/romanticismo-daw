@@ -1,0 +1,110 @@
+/*********************************************************************/
+/*  Web del Romanticismo  - Estilo de landing page                   */
+/*  CSS de Autores románticos                                        */
+/*  Autora: Pilar González Augusto                                   */
+/*  versión 1.0                                                      */
+/*********************************************************************/
+
+/****************** ESTILO GENERAL ***********************************/
+
+@font-face {
+    font-family: titulos;
+    src: url('./../fonts/LobsterTwo-Bold.ttf');
+}
+
+* {box-sizing:border-box;}                   /* del borde pa dentro tó es caja */
+
+body {font-family: 'Montserrat', sans-serif;
+      background-color: rgb(114, 92, 92);  /* más tarde LO REPLANTEO */
+      margin:0;padding:0;                   /* "por defecto del navegador" anulados */
+}
+
+#wrapper {background-color: #fff;
+          width:80%;
+          margin:auto;}
+
+
+/********************* HERO SECTION : opción 1 imagen + texto **********************/
+
+#hero { background-image: url('../images/herophoto.jpg'); /* coloco foto de fondo */
+       
+        height: 100vh;                                    /* obligar a que salga entera */
+        background-repeat: no-repeat;                     /* para que no se repita */
+        background-size: cover;                           /* para que cubra el wrapper */
+        background-position: center;                      /* donde está el elemento principal */
+        position:relative;
+    }
+
+#titulo {font-family: titulos;
+         font-size:3rem;
+         text-align:center;
+         width:40%;
+         position:absolute;
+         top:30%;
+         left:30%;
+         background-color: rgb(255,255,255,0.25);
+         backdrop-filter: blur(5px);    /* para aplicar filtro a un fondo */
+         border-radius: 50%;
+         }
+
+/****** POSICIONAMIENTO ABSOLUTO Y RELATIVO:
+          - CONTENEDOR HERO:  RELATIVE
+          - CONTENIDO, TEXTO:    ABSOLUTE         */
+
+/***************** HERO SECTION: opción 2 : color liso y waves ************/
+
+#hero2 {background-color: #0099ff;  /* mismo color que el getwaves ******/
+        height:40vh;                  /* alto dimensionado por mi  ********/
+        position:relative;
+       }
+
+#titulo2 {position:absolute; /* OJO AL TRUCO DEL ALMENDRUCO !!!!!! */
+          top:50%;   /* lo muevo el titulo a la mitad de alto y ancho */
+          left:50%;
+          /*********** necesito mover el texto para que quede enmedio ******/
+          transform: translate(-50%,-50%); /* SE RECOLOCA EN EL MEDIO **/
+
+          font-size: 4rem;
+          font-weight: bold;
+          color:white;
+          }       
+
+/*********************** HERO SECTION: OPCIÓN 3 ---> CON IMAGEN DE HAIKEI.APP ***/
+
+
+/*********************** HERO SECTION - OPCION 4 ---> CON VIDEO GRAN FORMATO *****/
+#myVideo {
+    position: relative;
+      right: 0;
+      bottom: 0;
+      width: 100%; /* se adapta al espacio que hay exactamente */
+      height: 100vh;
+    }
+
+    /* vamos a poner el título SUPERPUESTO sobre el video */
+#titulo4 { /* lo muevo hacia arriba */
+        position: relative; /* los dos son relative, independientes */
+        top: -400px;         
+        height:200px;
+        background: rgba(0, 0, 0, 0.5);
+        color: #f1f1f1;
+        width: 100%;
+        padding: 20px;
+        }  /****** habría que cambiar en la media query el top de posicionamiento */
+  
+/*********************** MEDIA QUERIES ***********************************/
+
+@media only screen and (width<=900px){
+      #wrapper {width:90%;}
+      #titulo {width:60%;
+               left:20%;}
+      #titulo4 {top:-500px;}
+
+}
+
+@media only screen and (width<=600px){
+    #wrapper {width:100%;}
+    #titulo {width:80%;
+        left:10%;}
+    #titulo4 {top:-500px;}
+}
