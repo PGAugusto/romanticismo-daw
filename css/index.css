@@ -15,7 +15,7 @@
 * {box-sizing:border-box;}                   /* del borde pa dentro tó es caja */
 
 body {font-family: 'Montserrat', sans-serif;
-      background-color: rgb(114, 92, 92);  /* más tarde LO REPLANTEO */
+      background-color: rgb(160, 129, 129);  /* más tarde LO REPLANTEO */
       margin:0;padding:0;                   /* "por defecto del navegador" anulados */
 }
 
@@ -23,7 +23,7 @@ body {font-family: 'Montserrat', sans-serif;
           width:80%;
           margin:auto;}
 
-section {padding:50px 0;} /* en todas las secciones debe correr el aire */
+section {padding:5% 0;} /* en todas las secciones debe correr el aire */
 
 .titulo-section {font-family: titulos;
             font-size:3rem;
@@ -31,7 +31,7 @@ section {padding:50px 0;} /* en todas las secciones debe correr el aire */
             text-align:center;
             border-bottom: 3px solid black;
             width:50%;
-            margin:auto;}
+            margin:4% auto;}
 
 /********************* HERO SECTION : opción 1 imagen + texto **********************/
 
@@ -54,6 +54,7 @@ section {padding:50px 0;} /* en todas las secciones debe correr el aire */
          background-color: rgb(255,255,255,0.25);
          backdrop-filter: blur(5px);    /* para aplicar filtro a un fondo */
          border-radius: 50%;
+         color:rgb(108, 1, 1);
          }
 
 /****** POSICIONAMIENTO ABSOLUTO Y RELATIVO:
@@ -102,9 +103,45 @@ section {padding:50px 0;} /* en todas las secciones debe correr el aire */
         }  /****** habría que cambiar en la media query el top de posicionamiento */
 
         
-/********************** AUTORES SECTION **********************************/
+/*********************** IDEAS SECTION ************************************/
+#ideas {background-color: #f1f1f1;
+}
 
-#autores {background-color: #f1f1f1;
+.grid2 {display:grid;
+        grid-template-columns: 50% 50%;}
+
+.col2 {padding:4%;}
+
+.col2 img {width:100%;} 
+
+/********************** AUTORES SECTION **********************************/
+.grid4 {display:grid;
+        grid-template-columns:25% 25% 25% 25%;}
+.col4 {padding:4%;}
+
+        .card {
+            /* Add shadows to create the "card" effect */
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+          }
+        .card img {
+                   width:92%;
+                   margin:4%;
+                   border-radius:50%;
+                   filter:sepia(5px);
+                   opacity:0.5;
+        }
+        .card img:hover {
+            opacity:1;
+        }
+          /* On mouse-over, add a deeper shadow */
+          .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+          }
+          
+          /* Add some padding inside the card container */
+          .container {
+            padding: 2px 16px;
           }
 
 
@@ -119,6 +156,7 @@ section {padding:50px 0;} /* en todas las secciones debe correr el aire */
       #titulo {width:60%;
                left:20%;}
       #titulo4 {top:-500px;}
+      .grid2 {grid-template-columns: 100%;}
 
 }
 
