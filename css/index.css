@@ -14,6 +14,8 @@
 
 * {box-sizing:border-box;}                   /* del borde pa dentro tó es caja */
 
+html {scroll-behavior: smooth;} /* cambios de scroll en vínculos, suaves */
+
 body {font-family: 'Montserrat', sans-serif;
       background-color: rgb(160, 129, 129);  /* más tarde LO REPLANTEO */
       margin:0;padding:0;                   /* "por defecto del navegador" anulados */
@@ -40,7 +42,22 @@ section {padding:5% 0;} /* en todas las secciones debe correr el aire */
 .enlace:hover {color:#dd4b39;}
 
 /******************** ESTILO DE NAV ****************************************/
- /* Add a black background color to the top navigation */
+ 
+/* el contendor de la barra es nav, y lo pongo sticky */
+
+nav {position:sticky; /* se queda "pegado" */
+     top:0;           /* a la parte superior */
+     z-index: 99;     /* podría tener 98 capas por debajo */
+     /* opacity: 0.7; */
+     }
+
+.fa-arrow-up {position:fixed;
+              bottom:20px;
+              right:20px;}
+
+#arriba {color:black;}              
+
+/* Add a black background color to the top navigation */
  .topnav {
     background-color: #333;
     overflow: hidden;
@@ -169,13 +186,7 @@ section {padding:5% 0;} /* en todas las secciones debe correr el aire */
         padding: 20px;
         }  /****** habría que cambiar en la media query el top de posicionamiento */
 
-/*********************** INTRODUCCIÇON SECTION ****************************/
-
-#texto-intro {padding:0 2%;
-              margin:0 4%;
-              text-indent:3rem;
-              border-left:5px solid darkred;}
-
+        
 /*********************** IDEAS SECTION ************************************/
 
 #ideas {background-color: #f1f1f1;
@@ -238,6 +249,38 @@ section {padding:5% 0;} /* en todas las secciones debe correr el aire */
                                 }
 
 .card a:hover {background-color: rgb(85,85,85,0.7);}
+
+/*********************** ESTILO DE GALERÍA *************************************/
+.container {   /* utilizo este para youtube */
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+
+/*********************** ESTILO DE CONTACTO ************************************/
+
+
+
+.container2 {  /* utilizo este para maps cuadrado */
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 100%; /* 1:1 Aspect Ratio (divide 1 by 1 = 1) */
+}
+
+/* Then style the iframe to fit in the container div with full height and width */
+.responsive-iframe { /* es común para galería y contacto */
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
 
 
 /*********************** FOOTER CON UN GRID DE 3 COLUMNAS *********************/
